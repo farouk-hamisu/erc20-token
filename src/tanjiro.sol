@@ -1,6 +1,5 @@
 //SPDX-LICENSE-Identifier: MIT;
 pragma solidity ^ 0.8.20;
-import {IERC20} from "./interfaces/Ierc20.sol"; 
 
  contract Tanjiro {
     address public owner;
