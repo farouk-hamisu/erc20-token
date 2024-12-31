@@ -29,12 +29,12 @@ Follow these steps to set up the project and test the Tanjiro token:
     git clone https://github.com/your-username/erc20-token.git
     cd erc20-token
     ```
-- ** Install Dependencies
-    `````` bash 
+- **Install Dependencies
+    ``` bash 
     forge install 
-    ``````
--** Run the units to make sure everything is working 
-    `````` bash 
+    ```
+- **Run the units to make sure everything is working 
+    ``` bash 
     forge test 
 
 
