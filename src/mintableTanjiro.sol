@@ -4,7 +4,7 @@ import {Tanjiro} from "./tanjiro.sol";
 
 contract MintableTanjiro is Tanjiro {
   constructor(uint256 _supply) Tanjiro(_supply){}
-  uint256 maximumAllowedMintableTokens = 1; 
+  uint256 maximumAllowedMintableTokens = 5; 
   modifier limitTokens(uint256 _amount, address _to){
      require(_amount >= maximumAllowedMintableTokens); 
      require(balances[_to] < type(uint256).max-1000); 
