@@ -10,7 +10,7 @@ pragma solidity ^ 0.8.20;
     constructor(uint256 _supply) {
         supply = _supply;
         owner = msg.sender;
-        balances[msg.sender]= _supply; 
+        balances[msg.sender]=_supply; 
     } 
     function transfer(address _to, uint256 _amount) external  returns (bool){
       require(balances[msg.sender] >= _amount, "insufficient balance"); 
