@@ -1,6 +1,5 @@
 //SPDX-LICENSE-Identifier: MIT;
 pragma solidity ^ 0.8.20;
-
  contract Tanjiro {
     address public owner;
     uint256 public supply;
@@ -23,7 +22,6 @@ pragma solidity ^ 0.8.20;
     function allowance(address _owner, address _spender)  external view  returns (uint256){
       return approvedTransfers[_owner][_spender]; 
     }
-
     function approve(address _spender, uint256 _amount) external  returns (bool){
       require(balances[msg.sender] >= _amount, "insufficient balance"); 
       approvedTransfers[msg.sender][_spender] = _amount; 
@@ -38,19 +36,21 @@ pragma solidity ^ 0.8.20;
       emit Transfer(_from, _to, _amount); 
       return true; 
     }
-    // getter and setter functions
+    // getter and setter functions 
     function name() public pure  returns (string memory) {
-        return "tanjiro";
+        return "Tanjiro";
     }
     function totalSupply() public view returns (uint256) {
         return supply;
     }
-
     function symbol() public pure  returns (string memory) {
-        return "TJO";
+        return "Tanjiro";
     }
     function balanceOf(address _account) external view  returns (uint256) {
         return balances[_account];
+    }
+    function decimals() public pure returns (uint8){
+      return 2; 
     }
     
 }

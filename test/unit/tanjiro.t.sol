@@ -3,6 +3,7 @@ pragma solidity ^0.8.20;
 import {Tanjiro} from "../../src/tanjiro.sol"; 
 import {Test, console} from "forge-std/Test.sol";
 contract TanjiroTest is Test {
+  //@NOTE: some of the fake user names are from my favorite anime movie demon slayer
   Tanjiro public tanjiro;
   uint256 constant INITIAL_SUPPLY = 100000; 
   uint256 constant AMOUNT_TO_BE_TRANSFERED = 1000; 
@@ -13,15 +14,15 @@ contract TanjiroTest is Test {
     tanjiro = new Tanjiro(INITIAL_SUPPLY); 
   }
   function testTokenName() public{
-    assertEq("tanjiro", tanjiro.name()); 
+    assertEq("Tanjiro", tanjiro.name()); 
   }
   function testTotalSupply() public {
     assertEq(INITIAL_SUPPLY, tanjiro.totalSupply()); 
   }
   function testTokenSymbol() public {
-    assertEq("TJO", tanjiro.symbol()); 
+    assertEq("Tanjiro", tanjiro.symbol()); 
   }
-  function testTokenTransfer() public {
+   function testTokenTransfer() public {
     address nezuko = getUser(); 
     tanjiro.transfer(nezuko, 1000); 
     assertEq(tanjiro.balanceOf(nezuko), 1000); 
