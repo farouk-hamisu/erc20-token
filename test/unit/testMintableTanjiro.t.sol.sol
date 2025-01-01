@@ -10,10 +10,18 @@ contract TestMintableTanjiro is Test {
   }
   function testMintTanjiro() external {
     address nezuko = makeAddr("nezuko"); 
-    uint256 _amount = 600; 
-    vm.prank(address(this)); 
+    uint256 _amount = 1; 
     mintTanjiro.mint(nezuko, _amount); 
     assertEq(mintTanjiro.balanceOf(nezuko), _amount); 
+  }
+  function testBreakMintWithSmallNumber() external {
+    address nezuko = makeAddr("nezuko"); 
+    mintTanjiro.mint(nezuko, 1); 
+  }
+  function testBreakMintWithBigNumber() external {
+    address nezuko = makeAddr("nezuko"); 
+    vm.expectRevert(); 
+    mintTanjiro.mint(nezuko, type(uint256).max); 
   }
 
 }

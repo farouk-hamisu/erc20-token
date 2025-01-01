@@ -4,7 +4,7 @@ import {Script}  from "forge-std/Script.sol";
 import {MintableTanjiro} from "../src/mintableTanjiro.sol"; 
 
 contract DeployTanjiro is Script {
-  uint256 INITIAL_SUPPLY = 100000; 
+  uint256 INITIAL_SUPPLY = 1000; 
   function run() public {
     vm.startBroadcast(); 
       new MintableTanjiro(INITIAL_SUPPLY); 
