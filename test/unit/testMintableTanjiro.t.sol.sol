@@ -1,4 +1,4 @@
-//SPDX-LICENSE-Identifier: MIT; 
+//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20; 
 import {Test} from "forge-std/Test.sol"; 
 import {MintableTanjiro} from "../../src/mintableTanjiro.sol"; 
@@ -23,5 +23,4 @@ contract TestMintableTanjiro is Test {
     vm.expectRevert(); 
     mintTanjiro.mint(nezuko, type(uint256).max); 
   }
-
 }

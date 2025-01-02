@@ -1,4 +1,4 @@
-//SPDX-LICENSE-Identifier: MIT;
+//SPDX-License-Identifier: MIT
 pragma solidity ^ 0.8.20;
  contract Tanjiro {
     address public owner;
